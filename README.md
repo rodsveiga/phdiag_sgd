@@ -6,6 +6,11 @@ Code for *Phase diagram of Stochastic Gradient Descent in high-dimensional two-l
 
 Paper link: [link](www)
 
+<p float="left">
+  <img src="https://github.com/rodsveiga/phdiag_sgd/blob/main/figures/arXiv_fig01.pdf" height="270">
+</p>
+
+
 ## Prerequisites
 - [python](https://www.python.org/) >= 3.6
 - [cython](https://cython.readthedocs.io/en/latest/#)
