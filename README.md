@@ -1,5 +1,7 @@
 # Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks
 
+*Under construction*.
+
 ## Description
 
 Code for *Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks*.
@@ -28,7 +30,9 @@ In this repository we provide the code and some guided example to help the reade
 
 The notebooks are self-explanatory.
 
+## Building Cython code
 
+Both ```/sim``` and ```/ode``` use Cython code. To build, run `python setup.py build_ext --inplace` on the respective folder. Then simply start a Python session and do whether `from sim import sim` or `from ode import ode` and use the imported function
 
 
 ## Reference
