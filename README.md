@@ -1,3 +1,5 @@
-# Phase diagram of Stochastic Gradient Descent inhigh-dimensional two-layer neural networks
+# Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks
 
-In construction.
+Repository for the paper *Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks*.
+
+## Reference
