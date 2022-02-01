@@ -6,7 +6,7 @@ Code for *Phase diagram of Stochastic Gradient Descent in high-dimensional two-l
 
 Paper link: [link](www)
 
-<p float="left">
+<p float="center">
   <img src="https://github.com/rodsveiga/phdiag_sgd/blob/main/figures/arXiv_fig01.pdf" height="270">
 </p>
 
