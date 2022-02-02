@@ -4,7 +4,7 @@ import os
 from odecy import odesolver
 np.random.seed(0)
 
-class odecy():
+class ode():
     def __init__(self, d, n, k):
         self.d = d
         self.n = n
@@ -53,10 +53,12 @@ class odecy():
 
 
 
-    def fit(self, alpha_max, delta, kappa, eta_inf= None, norm= True, noise= 0., tol=1e-10, save_log= False, save_folder= 'results/d_kappa_del/', save_key= ''):
+    def fit(self, t_max, delta, kappa, gamma_0= None, norm= True, noise= 0., tol=1e-10, save_log= False, save_folder= 'results/d_kappa_del/', save_key= ''):
 
         M_dyn = True
         I3_on = True
+        eta_inf = gamma_0
+        alpha_max = t_max
 
         if eta_inf is None:
             eta = self.n
@@ -90,7 +92,7 @@ class odecy():
             region = 'orange'
 
         print(' ')
-        print('alpha_scale: ',alpha_scale)
+        print('time scaling: ',alpha_scale)
 
         print('Initial conditions:')
         print('Q0 externally informed: %s' % str(self.Q0_inf))
@@ -123,11 +125,11 @@ class odecy():
                 d_initformat = '{:0'+str(int(round(np.log10(self.d_init))))+'}'
                 print_dinit = d_initformat.format(self.d_init)
 
-                folder_id = '%s_ddiscr%s_n%s_k%s_kappa%.5f_delta%.5f_etainf%s_noise%s_norm%s_init_inf_Q0_%s_M0_%s_P_%s_dinit%s_orthWt%s_lincombW0%s' % (region, print_d, '{:03}'.format(self.n), '{:03}'.format(self.k), kappa, delta, eta_print, '{:.0e}'.format(noise), str(norm), str(self.Q0_inf), str(self.M0_inf), str(self.P_inf), print_dinit, str(self.orthWt), str(self.lin_coeffW0))
+                folder_id = '%s_ddiscr%s_p%s_k%s_kappa%.5f_delta%.5f_gamma0_%s_noise%s_norm%s_init_inf_Q0_%s_M0_%s_P_%s_dinit%s_orthWt%s_lincombW0%s' % (region, print_d, '{:03}'.format(self.n), '{:03}'.format(self.k), kappa, delta, eta_print, '{:.0e}'.format(noise), str(norm), str(self.Q0_inf), str(self.M0_inf), str(self.P_inf), print_dinit, str(self.orthWt), str(self.lin_coeffW0))
             else:
-                folder_id = '%s_ddiscr%s_n%s_k%s_kappa%.5f_delta%.5f_etainf%s_noise%s_norm%s_init_inf_Q0_%s_M0_%s_P_%s_orthWt%s_lincombW0%s' % (region, print_d, '{:03}'.format(self.n), '{:03}'.format(self.k), kappa, delta, eta_print, '{:.0e}'.format(noise), str(norm), str(self.Q0_inf), str(self.M0_inf), str(self.P_inf),  str(self.orthWt), str(self.lin_coeffW0))
+                folder_id = '%s_ddiscr%s_p%s_k%s_kappa%.5f_delta%.5f_gamma0_%s_noise%s_norm%s_init_inf_Q0_%s_M0_%s_P_%s_orthWt%s_lincombW0%s' % (region, print_d, '{:03}'.format(self.n), '{:03}'.format(self.k), kappa, delta, eta_print, '{:.0e}'.format(noise), str(norm), str(self.Q0_inf), str(self.M0_inf), str(self.P_inf),  str(self.orthWt), str(self.lin_coeffW0))
         else:
-            folder_id = '%s_ddiscr%s_n%s_k%s_kappa%.5f_delta%.5f_etainf%s_noise%s_norm%s_init_uninf' % (region, print_d, '{:03}'.format(self.n), '{:03}'.format(self.k), kappa, delta, eta_print, '{:.0e}'.format(noise), str(norm))
+            folder_id = '%s_ddiscr%s_n%s_p%s_kappa%.5f_delta%.5f_gamma0_%s_noise%s_norm%s_init_uninf' % (region, print_d, '{:03}'.format(self.n), '{:03}'.format(self.k), kappa, delta, eta_print, '{:.0e}'.format(noise), str(norm))
 
         file_path_id = save_folder + folder_id
         isExist = os.path.exists(file_path_id)
