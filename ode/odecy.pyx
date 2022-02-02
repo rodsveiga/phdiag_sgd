@@ -51,7 +51,7 @@ cpdef odesolver(long m_max, bint norm, double[:,:] Q, double[:,:] M, double[:,:]
 
     eg_.append(eg00)
     alpha_.append(0.)
-    print('ddiscr= %d, k= %d, n= %d, eta_ode= %.4f, noise= %s  -- j= %d, alpha= %s, eg= %.10f, time= %.2f' % (d, k, n, eta,'{:.0e}'.format(noise), 0, '{:.0e}'.format(0), eg00, 0) )
+    print('ddiscr= %d, k= %d, p= %d, gamma_0= %.4f, noise= %s  -- j= %d, t= %s, eg= %.10f, time= %.2f' % (d, k, n, eta,'{:.0e}'.format(noise), 0, '{:.0e}'.format(0), eg00, 0) )
     '''-------------------------------------'''
     t0 = time.time()
 
@@ -241,7 +241,7 @@ cpdef odesolver(long m_max, bint norm, double[:,:] Q, double[:,:] M, double[:,:]
             alpha_.append(alpha)
 
             t1 = time.time()
-            print('ddiscr= %d, k= %d, n= %d, eta_ode= %.4f, noise= %s  -- j= %d, alpha= %s, eg= %.10f, time= %.2f' % (d, k, n, eta,'{:.0e}'.format(noise), v, '{:.0e}'.format(alpha), eg0, t1-t0) )
+            print('ddiscr= %d, k= %d, p= %d, gamma_0= %.4f, noise= %s  -- j= %d, t= %s, eg= %.10f, time= %.2f' % (d, k, n, eta,'{:.0e}'.format(noise), v, '{:.0e}'.format(alpha), eg0, t1-t0) )
             #print('Q= ', np.array(Q))
             #print('M= ', np.array(M))
             t0 = time.time()

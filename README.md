@@ -7,15 +7,13 @@
 Code for *Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks*.
 
 <p float="center">
-  <img src="https://github.com/rodsveiga/phdiag_sgd/blob/main/figures/arXiv_fig01_image.jpg" height="300">
+  <img src="https://github.com/rodsveiga/phdiag_sgd/blob/main/figures/arXiv_fig01_image.jpg" height="350">
 </p>
 
 
 ## Prerequisites
 - [python](https://www.python.org/) >= 3.6
 - [cython](https://cython.readthedocs.io/en/latest/#)
-- [scikit-learn](https://scikit-learn.org/stable/)
-
 
 ## Structure
 
@@ -35,4 +33,4 @@ Both ```/sim``` and ```/ode``` use Cython code. To build, run `python setup.py b
 
 ## Reference
 
-[1] *Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks*, R. Veiga, L. Stephan, B. Loureiro, F. Krzakala and L. Zdeborová, [arXiv:2202.00293](https://arxiv.org/abs/2202.00293)[stat.ML]
+[1] *Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks*, R. Veiga, L. Stephan, B. Loureiro, F. Krzakala and L. Zdeborová, [arXiv:2202.00293](https://arxiv.org/abs/2202.00293) [stat.ML]
