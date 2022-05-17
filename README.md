@@ -1,7 +1,5 @@
 # Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks
 
-*Under construction*.
-
 ## Description
 
 Code for *Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks*.
