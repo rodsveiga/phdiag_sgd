@@ -17,7 +17,7 @@ Code for *Phase diagram of Stochastic Gradient Descent in high-dimensional two-l
 
 ## Structure
 
-In this repository we provide the code and some guided example to help the reader to reproduce the figures of the paper [1]. The repository is structured as follows.
+In this repository we provide the code and some guided example to help the reader to reproduce the figures. The repository is structured as follows.
 
 | File                          | Description                                                                                                                                                    |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -29,8 +29,3 @@ The notebooks are self-explanatory.
 ## Building Cython code
 
 Both ```/sim``` and ```/ode``` use Cython code. To build, run `python setup.py build_ext --inplace` on the respective folder. Then simply start a Python session and do whether `from sim import sim` or `from ode import ode` and use the imported function as described in the `how_to.ipynb` notebooks.
-
-
-## Reference
-
-[1] *Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks*, R. Veiga, L. Stephan, B. Loureiro, F. Krzakala and L. Zdeborová, [arXiv:2202.00293](https://arxiv.org/abs/2202.00293) [stat.ML]
