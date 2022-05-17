@@ -31,7 +31,7 @@ The notebooks are self-explanatory.
 Both ```/sim``` and ```/ode``` use Cython code. To build, run `python setup.py build_ext --inplace` on the respective folder. Then simply start a Python session and do whether `from sim import sim` or `from ode import ode` and use the imported function as described in the `how_to.ipynb` notebooks.
 
 
-%## Reference
+## Reference
 
-%[1] *Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks*, R. Veiga, L. Stephan, B. Loureiro, F. Krzakala and L. Zdeborová, [arXiv:2202.00293](https://arxiv.org/abs/2202.00293) [stat.ML]
+[1] *Phase diagram of Stochastic Gradient Descent in high-dimensional two-layer neural networks*, R. Veiga, L. Stephan, B. Loureiro, F. Krzakala and L. Zdeborová, [arXiv:2202.00293](https://arxiv.org/abs/2202.00293) [stat.ML]
 
