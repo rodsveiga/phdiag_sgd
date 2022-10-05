@@ -15,7 +15,7 @@ Repository for the paper [*Phase diagram of Stochastic Gradient Descent in high-
 
 ## Structure
 
-In this repository we provide the code and some guided example to help the reader to reproduce the figures. The repository is structured as follows.
+In this repository we provide the code and some guided examples to help the reader to reproduce the figures. The repository is structured as follows.
 
 | File                          | Description                                                                                                                                                    |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
