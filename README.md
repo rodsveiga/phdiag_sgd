@@ -19,14 +19,14 @@ In this repository we provide the code and some guided examples to help the read
 
 | File                          | Description                                                                                                                                                    |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ```/sim``` | Description      |
-| ```/ode``` | Desciption 2                                |
+| ```/sim``` | ```sim.py``` is the simulation class, which imports cython code from ```simcy.pyx```. ```setup.py``` is an auxiliar buinding file for cython   |
+| ```/ode``` | ```ode.py``` is the ODE solver class, which imports cython code from ```odecy.pyx```. ```setup.py``` is an auxiliar buinding file for cython |                              |
 
 The notebooks are self-explanatory.
 
-## Building Cython code
+## Building cython code
 
-Both ```/sim``` and ```/ode``` use Cython code. To build, run `python setup.py build_ext --inplace` on the respective folder. Then simply start a Python session and do whether `from sim import sim` or `from ode import ode` and use the imported function as described in the `how_to.ipynb` notebooks.
+Both ```/sim``` and ```/ode``` use cython code. To build, run `python setup.py build_ext --inplace` on the respective folder. Then simply start a python session and do whether `from sim import sim` or `from ode import ode` and use the imported function as described in the `how_to.ipynb` notebooks.
 
 ## Reference
 
